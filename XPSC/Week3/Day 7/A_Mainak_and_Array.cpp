@@ -26,9 +26,10 @@ const int N = 10005;
 vector<int> adj[N];
 bool vis[N];
 
-void print(vector<int>&v)
+void print(vector<int> &v)
 {
-    for(int i = 0; i < v.size(); i++) cout << v[i] << " ";
+    for (int i = 0; i < v.size(); i++)
+        cout << v[i] << " ";
     cout << nl;
 }
 
@@ -43,12 +44,12 @@ int32_t main()
     {
         int n;
         cin >> n;
-        vector<int>v(n);
-        for(int i = 0; i < n; i++) cin >> v[i];
-        int mx = 0;
-        for(int i = 1; i < n; i++) mx = max(mx, v[i] - v[0]);
-        for(int i = 0; i < n - 1; i++) mx = max(mx, v[i] - v[n - 1]);
-        for(int i = 1; i < n; i++) mx = max(mx, v[i] - v[i - 1]);
+        vector<int> v(n);
+        for (int i = 0; i < n; i++) cin >> v[i];
+        int mx = v[n - 1] - v[0];
+        for (int i = 1; i < n; i++) mx = max(mx, v[i] - v[0]);
+        for (int i = 0; i < n - 1; i++) mx = max(mx, v[n - 1] - v[i]);
+        for (int i = 1; i < n; i++) mx = max(mx, v[i - 1] - v[i]);
         cout << mx << nl;
     }
     return 0;

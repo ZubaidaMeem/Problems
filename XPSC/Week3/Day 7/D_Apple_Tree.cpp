@@ -22,7 +22,7 @@ int Inf = 1e18;
 
 using namespace std;
 
-const int N = 2 * 10000 + 5;
+const int N = 2e5 + 5;
 vector<int> adj[N];
 vector<int> cnt(N);
 bool vis[N];
