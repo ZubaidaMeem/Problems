@@ -27,42 +27,11 @@ const int N = 10005;
 vector<int> adj[N];
 bool vis[N];
 
-template <class T>
-void print(vector<T> &v)
-{
-    for (T i : v)
-        cout << i << " ";
-    cout << nl;
-}
-template <class T>
-void _print(vector<T> &v)
-{
-    for (T i : v)
-        cout << i.first << " " << i.second << nl;
-}
-template <class T>
-void print(set<T> &s)
-{
-    for (T i : s)
-        cout << i << " ";
-    cout << nl;
-}
-template <class T, class V>
-void _print(map<T, V> &mp)
-{
-    for (auto i : mp)
-        cout << i.first << " " << i.second << nl;
-}
-template <class T, class V>
-void _print(pair<T, V> p)
-{
-    for (auto i : p)
-        cout << i.first << " " << i.second << nl;
-}
-
-int log2(int num)
-{
-}
+template<class T> void print(vector<T>&v) { for (T i : v) cout << i << " "; cout << nl; }
+template<class T> void _print(vector<T>&v) { for (T i : v) cout << i.first << " " << i.second << nl; }
+template<class T> void print(set<T>&s) { for (T i : s) cout << i << " "; cout << nl; }
+template<class T, class V> void _print(map <T, V> &mp) { for (auto i : mp) cout << i.first << " " << i.second << nl; }
+template<class T, class V> void _print(pair <T, V> p) { for (auto i : p) cout << i.first << " " << i.second << nl; }
 
 int32_t main()
 {
@@ -70,10 +39,10 @@ int32_t main()
     cin.tie(0);
     cout.tie(0);
     int tt = 1;
-    cin >> tt;
+    //cin >> tt;
     while (tt--)
     {
-        int n;
+         int n;
         cin >> n;
         int mx = 0;
         vector<int> v(n);
@@ -82,31 +51,6 @@ int32_t main()
             cin >> v[i];
             mx = max(v[i], mx);
         }
-
-        int x = log2(mx);
-        int cnt = 0;
-        int k = 2;
-
-        while (mx)
-        {
-            
-        }
-
-        return cnt + 1;
-
-        int cnt1 = 0;
-
-        for (int i = 0; i < n; i++)
-        {
-            if (log2(v[i]) == x)
-            {
-                cnt1++;
-            }
-        }
-
-        cnt1 = (cnt1 + 1) / 2;
-
-        cout << cnt1 << nl;
     }
     return 0;
 }
