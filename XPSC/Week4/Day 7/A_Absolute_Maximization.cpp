@@ -42,23 +42,18 @@ int32_t main()
     cin >> tt;
     while (tt--)
     {
-
         int n;
         cin >> n;
-        vector<int> v(n);
-        for (int i = 0; i < n; i++) cin >> v[i];
-        sort(all(v), greater<int>());
-        int cnt = 1, XOR = v[0];
-        for (int i = 1; i < n; i++)
+        int x, y, a, b;
+        cin >> x;
+        a = b = x;
+        for (int i = 0; i < n - 1; i++)
         {
-            if (XOR >= v[i]) XOR ^= v[i];
-            else
-            {
-                XOR = v[i];
-                cnt++;
-            }
+            cin >> x;
+            a |= x;
+            b &= x;
         }
-        cout << cnt << nl;
+        cout << a - b << nl;
     }
     return 0;
 }
