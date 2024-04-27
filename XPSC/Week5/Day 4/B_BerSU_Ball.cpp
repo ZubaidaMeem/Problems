@@ -26,38 +26,11 @@ const int N = 10005;
 vector<int> adj[N];
 bool vis[N];
 
-template <class T>
-void print(vector<T> &v)
-{
-    for (T i : v)
-        cout << i << " ";
-    cout << nl;
-}
-template <class T>
-void _print(vector<T> &v)
-{
-    for (T i : v)
-        cout << i.first << " " << i.second << nl;
-}
-template <class T>
-void print(set<T> &s)
-{
-    for (T i : s)
-        cout << i << " ";
-    cout << nl;
-}
-template <class T, class V>
-void _print(map<T, V> &mp)
-{
-    for (auto i : mp)
-        cout << i.first << " " << i.second << nl;
-}
-template <class T, class V>
-void _print(pair<T, V> p)
-{
-    for (auto i : p)
-        cout << i.first << " " << i.second << nl;
-}
+template<class T> void print(vector<T>&v) { for (T i : v) cout << i << " "; cout << nl; }
+template<class T> void _print(vector<T>&v) { for (T i : v) cout << i.first << " " << i.second << nl; }
+template<class T> void print(set<T>&s) { for (T i : s) cout << i << " "; cout << nl; }
+template<class T, class V> void _print(map <T, V> &mp) { for (auto i : mp) cout << i.first << " " << i.second << nl; }
+template<class T, class V> void _print(pair <T, V> p) { for (auto i : p) cout << i.first << " " << i.second << nl; }
 
 int32_t main()
 {
