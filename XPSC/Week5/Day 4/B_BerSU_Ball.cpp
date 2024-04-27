@@ -51,7 +51,7 @@ int32_t main()
             v.push_back(x);
         }
         int m;
-        cin >> n;
+        cin >> m;
         for (int i = 0; i < m; i++)
         {
             int x;
