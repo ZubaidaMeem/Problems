@@ -45,14 +45,22 @@ int32_t main()
         cin >> n >> t;
         vector<int>v(n);
         for(int i = 0; i < n; i++) cin >> v[i];
-        sort(all(v));
-        int l = 1, r = 1e9 * 1e9, ans;
+        int l = 1, r = 1e18, ans = 0;
         while (l <= r)
         {
             int mid = l + (r - l) /2;
             int x = 0;
-            for(int i = 0; i  < n; i++) x +=  mid / v[i];
-            if(x >= t) ans = mid, r = mid - 1;
+            bool flag = 0;
+            for(int i = 0; i  < n; i++)
+            {
+                x +=  mid / v[i];
+                if(x >= t)
+                {
+                    flag = 1;
+                    break;
+                }
+            }
+            if(flag) ans = mid, r = mid - 1;
             else l = mid + 1;
         }
         cout << ans;
